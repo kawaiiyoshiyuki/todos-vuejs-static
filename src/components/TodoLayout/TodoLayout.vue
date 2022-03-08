@@ -9,7 +9,7 @@
       required
     />
     <div class="truncate">Add your todo task above, hit Enter to submit.</div>
-    <ul class="collection" v-for="todo in todos">
+    <ul class="collection" v-for="todo in todos" :key="todo.id">
       <li
         class="collection-item"
         :key="todo"
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: "TodoLayout",
+  name: "todo-layout",
   data() {
     return {
       todos: [
